@@ -1,0 +1,44 @@
+@import "./reset";
+@import "./variables/variables";
+@import "./mixins/mixins";
+@import "./placeholder/placeholder";
+@import "./mixins/mixins";
+@import "./animations/animations";
+@import "./layouts/header";
+@import "./layouts/banner";
+@import "./components/lightbox-media";
+@import "./components/returnMain";
+@import "./components/modale";
+@import "./components/total_likes";
+@import "./components/dropdown";
+@import "./components/cards-medias";
+@import "./components/photographer-cards";
+@import "./components/tags";
+
+body {
+  color: $tertiary;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+p:focus-visible,
+a:focus-visible {
+  outline: 3px solid $secondary;
+}
+
+.anticscroll {
+  height: 100%;
+  overflow: hidden;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
