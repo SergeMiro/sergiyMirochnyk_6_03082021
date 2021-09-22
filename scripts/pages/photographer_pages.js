@@ -29,6 +29,7 @@ window.addEventListener("load", () => {
     .then((data) => createData(data))
     .then(displayPage);
 });
+
 // création des données à afficher sur la page
 function createData(data) {
   // créer un objet photographe si l'id est égale à l'id de l'adresse
@@ -137,7 +138,7 @@ export function displayMediaList() {
     heartLink.append(heart);
     compteurLikes(totalLikes);
 
-    // compteur de likes
+    // compteur de likes - faire mardi
     function compteurLikes() {
       heartLink.addEventListener("click", () => {
         if (heart.classList.contains("fas")) {
@@ -157,67 +158,3 @@ export function displayMediaList() {
         }
       });
     }
-
-    cardsMediaImg.addEventListener("click", (e) => e.preventDefault());
-
-    cardsMediaImg.addEventListener("click", () =>
-      displayLightbox(media, displayMediaList, currentPhotographer)
-    );
-    cardsMediaImg.addEventListener("keyCode", (e) => {
-      if (e.code === "13") {
-        displayLightbox(media, displayMediaList, currentPhotographer);
-      }
-    });
-  });
-}
-
-function displayPage() {
-  const dialogTile = document.querySelector(".modal-title");
-  const btnContact = document.querySelector(".contact-btn");
-  const closeBtn = document.querySelector(".close-btn");
-  closeBtn.href = "#";
-
-  document.title += " - " + currentPhotographer.name;
-  dialogTile.textContent = `Contactez-moi ${currentPhotographer.name}`;
-
-  closeBtn.addEventListener("click", () => closeDialog());
-
-  btnContact.addEventListener("click", () => openDialog());
-  closeBtn.addEventListener("keydown", (e) => {
-    if (e.code === "Escape") {
-      closeDialog();
-    }
-  });
-
-  displayBanner(currentPhotographer, displayMediaList);
-  verifModal(currentPhotographer);
-  displayFilterMenu(displayMediaList);
-  displayInfo(displayMediaList);
-  displayMediaList();
-}
-
-function displayInfo() {
-  const totalLikesContainer = document.createElement("div");
-  const priceContainer = document.createElement("div");
-  const price = document.createElement("p");
-
-  const totalLikesNb = document.createElement("div");
-  const heart = document.createElement("i");
-
-  heart.classList.add(`fas`);
-  heart.classList.add(`fa-heart`);
-  heart.classList.add(`heart`);
-  heart.classList.add(`heart-global`);
-
-  priceContainer.classList.add("price-container");
-  price.classList.add("price");
-  totalLikesContainer.classList.add("total-likes-container");
-  totalLikesNb.classList.add("total-likes");
-  totalLikesNb.textContent = `${mediaList.getLikes()}`;
-  price.textContent = `${currentPhotographer.price}€/ jour`;
-
-  main.append(totalLikesContainer);
-  totalLikesNb.append(heart);
-  priceContainer.append(price);
-  totalLikesContainer.append(totalLikesNb, priceContainer);
-}
