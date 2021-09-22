@@ -1,0 +1,23 @@
+{
+  "name": "sergiyMirochnyk_6_03082021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./styles/main.scss:./styles/main.css --style compressed",
+    "lint": "./node_modules/.bin/eslint scripts/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiyMirochnyk/sergiyMirochnyk_6_03082021"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergiyMirochnyk/sergiyMirochnyk_6_03082021/issues"
+  },
+  "homepage": "https://github.com/sergiyMirochnyk/sergiyMirochnyk_6_03082021#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
