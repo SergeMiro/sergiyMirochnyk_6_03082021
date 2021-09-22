@@ -7,7 +7,7 @@
  /**
   * name photographerList
   * @type {array}
-  * @description Tableau des objets instanciés avec la classe phhotographer
+  * @description Tableau des objets instanciés avec la classe photographer
   *
   */
  const photographerList = new PhotographerList();
@@ -21,7 +21,6 @@
  
  const linkToData = "./data/FishEyeDataFR.json";
  
- const loader = document.querySelector(".loader-container");
  
  window.addEventListener("load", () => {
    fetch(linkToData)
@@ -30,16 +29,10 @@
          return response.json();
        } else {
          console.log(`Une erreur de type ${response.status}  est survenu ! `);
-         setTimeout(function loaderAnim() {
-           loader.className += " hidden";
-         }, 2000);
        }
      })
      .then((data) => createPhotographerList(data))
      .then(displayPage);
-   setTimeout(function loaderAnim() {
-     loader.className += " hidden";
-   }, 2000);
  });
  
  /**
