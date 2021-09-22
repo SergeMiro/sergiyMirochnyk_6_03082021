@@ -2,16 +2,16 @@
  * @module Medium-class
  */
 /**
- * Class pour créer un nouveaux média video ou image
+ * Class pour créer un nouveau média (vidéo ou image)
  */
  export class Medium {
     /**
-     * detais concernant le media
-     * @param {string} type type de média image ou vidéo
+     * détails concernant le media
+     * @param {string} type type de média (image ou vidéo)
      * @param {string} alt  balise Alt
      * @param {date} date   date d'ajout du média
      * @param {number} id   ID du média
-     * @param {string} link Liens vers le média
+     * @param {string} link Lien vers le média
      * @param {number} likes Nombre de likes du média
      * @param {number} photographerId ID du photographe liée au média
      * @param {string} tags tags associés au média

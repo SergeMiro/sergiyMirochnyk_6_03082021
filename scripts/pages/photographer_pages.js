@@ -190,34 +190,5 @@ function displayPage() {
   });
 
   displayBanner(currentPhotographer, displayMediaList);
-  verifModal(currentPhotographer);
-  displayFilterMenu(displayMediaList);
-  displayInfo(displayMediaList);
-  displayMediaList();
-}
-
-function displayInfo() {
-  const totalLikesContainer = document.createElement("div");
-  const priceContainer = document.createElement("div");
-  const price = document.createElement("p");
-
-  const totalLikesNb = document.createElement("div");
-  const heart = document.createElement("i");
-
-  heart.classList.add(`fas`);
-  heart.classList.add(`fa-heart`);
-  heart.classList.add(`heart`);
-  heart.classList.add(`heart-global`);
-
-  priceContainer.classList.add("price-container");
-  price.classList.add("price");
-  totalLikesContainer.classList.add("total-likes-container");
-  totalLikesNb.classList.add("total-likes");
-  totalLikesNb.textContent = `${mediaList.getLikes()}`;
-  price.textContent = `${currentPhotographer.price}€/ jour`;
-
-  main.append(totalLikesContainer);
-  totalLikesNb.append(heart);
-  priceContainer.append(price);
-  totalLikesContainer.append(totalLikesNb, priceContainer);
-}
+  verifModal(currentPhotographer); 
+  
