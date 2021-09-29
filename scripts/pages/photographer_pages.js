@@ -138,7 +138,7 @@ export function displayMediaList() {
     heartLink.append(heart);
     compteurLikes(totalLikes);
 
-    // compteur de likes
+    // compteur de likes  - faire mardi
     function compteurLikes() {
       heartLink.addEventListener("click", () => {
         if (heart.classList.contains("fas")) {
