@@ -5,7 +5,7 @@
 
 @media screen and (min-width: 10rem) and (max-device-width: 30rem){
 .banner .banner-body{width:65%;animation:apparition .8s ease-in-out;font-size:1.4rem;margin-top:1rem; color: #000;} 
-.banner-img img{height:90px;width:90px;object-fit:cover;border-radius:50%;animation:apparition-right .8s ease-in-out;margin-left:1rem}
+.banner-img img{height:83px;width:83px;object-fit:cover;border-radius:50%;animation:apparition-right .8s ease-in-out;margin-left:1rem}
 }
 
 
