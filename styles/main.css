@@ -3,8 +3,8 @@
 
 
 
-@media screen and (min-width: 20rem){
-.banner .banner-body{width:95%;animation:apparition .8s ease-in-out;font-size:1.4rem;margin-top:1rem} 
+@media screen and (device-aspect-ratio: 2/3){
+.banner .banner-body{width:95%;animation:apparition .8s ease-in-out;font-size:1.4rem;margin-top:1rem; color: #000;} 
 .banner-img img{height:90px;width:90px;object-fit:cover;border-radius:50%;animation:apparition-right .8s ease-in-out;margin-left:1rem}
 }
 
